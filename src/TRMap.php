@@ -65,7 +65,7 @@ class TRMap extends Field
         }
     }
 
-    public function resolve($resource, $attribute = null)
+    public function resolve($resource, ?string $attribute = null): void
     {
         if ($resource->getAttribute('latitude')) {
             $this->latitude(floatval($resource->getAttribute('latitude')));
